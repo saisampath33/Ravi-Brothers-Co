@@ -1,0 +1,17 @@
+{
+  "name": "dry-fruits-project",
+  "version": "1.0.0",
+  "description": "1) Engineered a dynamic web platform to improve awareness and accessibility of dry fruits and spices. 2) Designed an intuitive UI with tab-based navigation for products, health benefits, and downloadable recipes. 3) Created a secure authentication system with login/signup, enabling features like saving favorites and shopping lists. Live website:  https://ravi-brothers-co.onrender.com/index.html",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
