@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="/css/contactuscss.css">
     <style>
@@ -77,21 +78,21 @@
                 <div class="infoBox">
                     <div>
                         <span><ion-icon name="location"></ion-icon></span>
-                        <p>Jagadamba, Visakhapatnam<br>530002</p>
+                        <p>Jagadamba, Visakhapatnam<br>530001</p>
                     </div>
                     <div>
                         <span><ion-icon name="mail"></ion-icon></span>
-                        <a href="mailto:saisampathkorada@gmail.com">premkumarsuru@gmail.com</a>
+                        <a href="mailto:saisampathkorada@gmail.com">saisampathkorada@gmail.com</a>
                     </div>
                     <div>
                         <span><ion-icon name="call"></ion-icon></span>
-                        <a href="tel:+91 9849326159">+91 9849326159</a>
+                        <a href="tel:+91 8247757805">+91 8247757805</a>
                     </div>
                     <script src="https://smtpjs.com/v3/smtp.js"></script> 
     <script>
         function sendEmail() {
             (function(){
-                emailjs.init("dr4zwTl5f8TGMLd02");
+                emailjs.init("BmYRRcS8J4RdcF6Zs");
             })();
             var params={
             sendername:document.querySelector("#sendername").value,
@@ -100,25 +101,27 @@
             Device_name:document.querySelector("#Device_name").value,
             subject:document.querySelector("#subject").value,
             };
-            var service="service_uthu4pd";
-            var template="template_vzydofv";
+            console.log(params)
+            var service="service_tauecwy";
+            var template="template_n21xvd2";
             emailjs.send(service,template,params)
             .then(res=>{
                     alert("Email sent succcessfully");
             })
-            .catch();
+            .catch((err) => {
+                console.error("Failed to send email:", err);
+                alert("Error sending email");
+            });
 }
-
-
     </script>
 
                     <!--Social media Links-->
 
                     <ul class="sci">
-                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <!-- <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li> -->
+                        <li><a href="https://www.linkedin.com/in/sai-sampath2004/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                        <li><a href="https://www.instagram.com/sai_sampath_33/"><ion-icon name="logo-instagram"></ion-icon></a></li>
                     </ul>
                 </div>
             </div>
