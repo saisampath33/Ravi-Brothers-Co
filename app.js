@@ -1,80 +1,43 @@
-// const express = require('express');
-// const app = express();
-
-// app.use(express.static(__dirname+'/public'));
-
-// app.get('/',(req,res)=>{
-//     res.sendFile(__dirname+'/front.html');
-//     // res.render("./public")
-// })
-
-// app.get('/index.html',(req,res)=>{
-//     res.sendFile(__dirname+'/index.html');
-// })
-// app.get('/start.html',(req,res)=>{
-//     res.sendFile(__dirname+'/start.html');
-// })
-
-// app.get("/About.html",(req,res)=>{
-//     res.sendFile(__dirname+'/About.html');
-// })
-
-// app.get('/contactus.html',(req,res)=>{
-//     res.sendFile(__dirname+'/contactus.html');
-// })
-
-// app.get('/login.html',(req,res)=>{
-//     res.sendFile(__dirname+'/login.html');
-// })
-
-
-// app.get('/email.html',(req,res)=>{
-//     res.sendFile(__dirname+'/email.html');
-// })
-
-
-// app.listen(5581);
-
-
 const express = require('express');
-const path = require('path');
 const app = express();
 
-// ✅ Serve static files like CSS, JS, images, and HTML from /public
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname+'/public'));
 
-// ✅ Route for homepage (front.html)
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'front.html'));
-});
+app.get('/',(req,res)=>{
+    res.sendFile(__dirname+'/front.html');
+    // res.render("./public")
+})
 
-// ✅ These routes are optional if you use express.static, but included for clarity
-app.get('/index.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+app.get('/index.html',(req,res)=>{
+    res.sendFile(__dirname+'/index.html');
+})
+app.get('/start.html',(req,res)=>{
+    res.sendFile(__dirname+'/start.html');
+})
 
-app.get('/start.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'start.html'));
-});
+app.get("/About.html",(req,res)=>{
+    res.sendFile(__dirname+'/About.html');
+})
 
-app.get('/About.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'About.html'));
-});
+app.get('/contactus.html',(req,res)=>{
+    res.sendFile(__dirname+'/contactus.html');
+})
 
-app.get('/contactus.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'contactus.html'));
-});
+app.get('/login.html',(req,res)=>{
+    res.sendFile(__dirname+'/login.html');
+})
 
-app.get('/login.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'login.html'));
-});
 
-app.get('/email.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'email.html'));
-});
+app.get('/email.html',(req,res)=>{
+    res.sendFile(__dirname+'/email.html');
+})
+
+
+app.listen(5581);
+
 
 // ✅ Export app (for Vercel serverless function)
-module.exports = app;
+// module.exports = app;
  // No app.listen() for vercel deployment
 
 // const PORT = process.env.PORT || 3000;
