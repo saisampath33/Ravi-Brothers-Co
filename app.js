@@ -36,44 +36,46 @@
 // app.listen(5581);
 
 
-
 const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static files from /public
+// ✅ Serve static files like CSS, JS, images, and HTML from /public
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes for static HTML pages
+// ✅ Route for homepage (front.html)
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'front.html'));
+    res.sendFile(path.join(__dirname, 'public', 'front.html'));
 });
 
+// ✅ These routes are optional if you use express.static, but included for clarity
 app.get('/index.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/start.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'start.html'));
+    res.sendFile(path.join(__dirname, 'public', 'start.html'));
 });
 
 app.get('/About.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'About.html'));
+    res.sendFile(path.join(__dirname, 'public', 'About.html'));
 });
 
 app.get('/contactus.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'contactus.html'));
+    res.sendFile(path.join(__dirname, 'public', 'contactus.html'));
 });
 
 app.get('/login.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'login.html'));
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
 
 app.get('/email.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'email.html'));
+    res.sendFile(path.join(__dirname, 'public', 'email.html'));
 });
 
-module.exports = app; // No app.listen() for vercel deployment
+// ✅ Export app (for Vercel serverless function)
+module.exports = app;
+ // No app.listen() for vercel deployment
 
 // const PORT = process.env.PORT || 3000;
 // app.listen(PORT, () => {
